@@ -1,0 +1,624 @@
+/* Import the font.css file */
+@import url('./font.css');
+
+/* GENERAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Feruka', sans-serif;
+}
+
+:root {
+  --switches-label-color: white;
+  --switch-bg-color: white;
+  --grey-1: #758293;
+  --light-grey-1: #838587;
+  --light-grey-2: #616264;
+  --light-grey-3: #4a4b4d;
+  --dark-grey-1: #0a0d0f;
+}
+
+h1 {
+  font-family: 'StarJedi', sans-serif;
+  color: #FFF;
+  font-size: 60px;
+  margin-bottom: 50px;
+  text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.btn-container button {
+  width: 55%;
+  font-size: 20px;
+}
+
+button {
+  border: 2px solid var(--grey-1);
+  background-color: #000;
+  color: #FFF;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--light-grey-2)
+}
+
+.hyperlink{
+  color: #FFF;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.hyperlink span{
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: sans-serif;
+  color: greenyellow;
+}
+
+/* FONTS */
+.aurebesh-font {
+  color: #778596;
+  font-family: 'Aurebesh', sans-serif;
+  letter-spacing: 8px;
+  font-size: 12px;
+}
+
+.jedistar-font {
+  color: #FFF;
+  font-family: 'starJedi',
+    sans-serif;
+}
+
+/* HEADER FOR INNER PAGES */
+.header{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  padding: 20px;
+}
+
+/* LOGIN/REGISTRATION PAGE */
+.auth-form-container {
+  background: #000;
+  border: 2px solid #FFF;
+  padding: 5px 0 100px;
+  opacity: 0.8;
+}
+
+.auth-form-container .hyperlink{
+  margin: 20px 10px;
+}
+
+.auth-form-header, .container-header {
+  background-color: var(--dark-grey-1);
+  color: #FFF;
+  border-top: 3px solid var(--light-grey-1);
+  border-bottom: 3px solid var(--light-grey-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.auth-header-outline, .container-header-outline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  width: 90%;
+  background: var(--dark-grey-1);
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.auth-form-header h2 {
+  font-family: 'StarJedi', sans-serif;
+}
+
+.login-page {
+  background-image: url('../images/star-wars-space-background.jpg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.auth-form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login-form {
+  min-width: 350px;
+  min-height: 350px;
+}
+
+.register-form {
+  min-width: 600px;
+}
+
+.login-form,
+.register-form {
+  padding: 40px 10px 0 10px;
+}
+
+.login-form>div,
+.register-form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: 'Feruka',
+    sans-serif;
+  text-align: left;
+  padding: 0.25rem 0;
+  color: #FFF;
+}
+
+label.aurebesh-font {
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+label:not(.aurebesh-font) {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+input {
+  margin: 0 0 30px 0;
+  padding: 10px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  background-color: #0a0d0f;
+  font-family: sans-serif;
+}
+
+input[type="password"] {
+  letter-spacing: 3px;
+}
+
+.register-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.register-input-inner {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.register-input input {
+  width: 70%;
+}
+
+.link-btn {
+  background: none;
+  color: #FFF;
+  text-decoration: underline;
+}
+
+
+/* TOGGLE SWITCH */
+.container {
+  margin-top: 10px;
+}
+
+.switches-container {
+  border: 2px solid var(--grey-1);
+  position: relative;
+  display: flex;
+  position: relative;
+  line-height: 3rem;
+  border-radius: 3rem;
+  margin: 0 10px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+  font-size: 16px;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--switches-label-color);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 0.15rem;
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+  border-radius: 3rem;
+  background: var(--switch-bg-color);
+  height: 100%;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  color: var(--switch-text-color);
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+  opacity: 1;
+}
+
+.error-message{
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: pink;
+  padding: 10px;
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.success-message{
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: greenyellow;
+  padding: 10px;
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+/* HOME PAGE */
+.home{
+  background-image: url('../images/star-wars-bg-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-menu{
+  background: #000;
+  border: 2px solid #FFF;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 100px;
+  opacity: 0.8;
+}
+
+.home-menu .btn-container{
+  padding: 40px 10px 0 10px;
+  display: block;
+}
+
+.home-menu .col{
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-menu .col button{
+  min-width: 200px;
+}
+
+.home-menu .col button:nth-child(1){
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ORIGINAL STYLING */
+/*body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}*/
+
+.box {
+  position: relative;
+  width: 380px;
+  height: 530px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+
+.borderLine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #5e1470, #5e1470, #5e1470);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.borderLine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #5e1470, #5e1470, #5e1470);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.box form {
+  position: absolute;
+  inset: 4px;
+  background: #222;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.box form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.box form .inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.box form .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.box form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.box form .inputBox input:valid~span,
+.box form .inputBox input:focus~span {
+  color: #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
+}
+
+.box form .inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.box form .inputBox input:valid~i,
+.box form .inputBox input:focus~i {
+  height: 44px;
+}
+
+.box form .links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box form .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+  color: #fff;
+}
+
+.box form input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: linear-gradient(#fff, #fff, #8f8f8f, #ae8ab8);
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.box form input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+
+.box form input[type="button"] {
+  display: center;
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.75em;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#fff, #fff, #8f8f8f, #ae8ab8);
+
+}
+
+.box form input[type="button"]:active {
+  opacity: 0.8;
+}
+
+
+
+/*.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}*/
+
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

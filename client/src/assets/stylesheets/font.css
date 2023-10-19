@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Aurebesh';
+    src: local('Aurebesh'),
+        url('../fonts/Aurebesh.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'StarJedi';
+    src: local('StarJedi'),
+        url('../fonts/star_jedi/starjedi/Starjedi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Feruka';
+    src: local('Feruka'),
+    url('../fonts/feruka/Feruka-PersonalUse.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*@font-face {
+    font-family: 'CustomFont2Name': src: local('CustomFont2Name'),
+        url('./fonts/CustomFont2Name.woff') format('woff'),
+        url('./fonts/CustomFont2Name.woff2') format('woff2');
+}*/
