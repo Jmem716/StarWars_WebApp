@@ -1,3 +1,1 @@
-# TestApp
-# Test
-# StarWars_WebApp
+# StarWars Game App
