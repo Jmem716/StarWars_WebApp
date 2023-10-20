@@ -7,6 +7,7 @@ import { Toggle } from "./components/Toggle";
 import { PassReset } from "./components/Pass-Reset";
 import { useCookies } from "react-cookie";
 import { Home } from "./pages/Home"; 
+import { Campaign } from "./pages/Campaign";
 
 
 const App = () => {
@@ -61,7 +62,13 @@ const App = () => {
             </div>
           } />
 
+          <Route path="/campaign" element={<Campaign />} />
+
           <Route path="/home" element={
+            accessToken ? <Home /> : <Navigate to="/login" />
+          } />
+
+          <Route path="/*" element={
             accessToken ? <Home /> : <Navigate to="/login" />
           } />
         </Routes>
