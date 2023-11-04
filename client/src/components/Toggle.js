@@ -40,12 +40,12 @@ export const Toggle = (props) => {
                     checked={isChecked === true}
                     onChange={() => toggleForm(true)}
                 />
-                <label htmlFor="switchOne">{isChecked ? "Log In" : "Returning User"}</label>
-                <label htmlFor="switchTwo">{props.currentForm === "reset" ? "Reset Password" : "Register"}</label>
+                <label htmlFor="switchOne">{isChecked ? "Returning User" : "Returning User"}</label>
+                <label htmlFor="switchTwo">{props.currentForm === "reset" ? "Register" : "Register"}</label>
                 <div className="switch-wrapper">
                     <div className="switch" onClick={switchToRegister}>
-                        <div>{isChecked ? "Back" : "Returning User"}</div>
-                        <div>{props.currentForm === "reset" ? "Reset Password" : "Register"}</div>
+                        <div>Returning User</div>
+                        <div>{props.currentForm === "reset" ? "Register" : "Register"}</div>
                     </div>
                 </div>
             </div>

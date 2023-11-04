@@ -1,0 +1,166 @@
+{
+    "id": 1,
+    "views": [
+      {
+        "sequence_id": 1,
+        "content": {
+          "exposition": "Once upon a time things happen. These things were great, but they could be better...",
+          "next": 2
+        }
+      },
+      {
+        "sequence_id": 2,
+        "content": {
+          "challenge": {
+            "text": "So you decide to arm up and head out, seeking adventure. Choose an item to bring.",
+            "type": "choice",
+            "actions": [
+              {
+                "id": 1,
+                "label": "Grab the soul taker!",
+                "alignment": "evil",
+                "next": 3
+              },
+              {
+                "id": 2,
+                "label": "Grab the map.",
+                "alignment": "neutral",
+                "next": 4
+              },
+              {
+                "id": 3,
+                "label": "Grab the sword of justice",
+                "alignment": "good",
+                "next": 5
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sequence_id": 3,
+        "content": {
+          "exposition": "The soul taker shoots a beam of light pointing to your next victim. You head into the forest.",
+          "next": 6
+        }
+      },
+      {
+        "sequence_id": 4,
+        "content": {
+          "exposition": "The map has a huge X to the West, beyond the Great Forest. You begin your journey in the forest.",
+          "next": 6
+        }
+      },
+      {
+        "sequence_id": 5,
+        "content": {
+          "exposition": "A glowing raven lands on your shoulder and announces itself to be a messenger of the paladins. It squawks, begging you to follow and flies into the forest.",
+          "next": 6
+        }
+      },
+      {
+        "sequence_id": 6,
+        "content": {
+          "challenge": {
+            "text": "The trees of the forest tower over you. A sound in the distance captures your attention.",
+            "type": "check",
+            "actions": [
+              {
+                "id": 1,
+                "label": "[Physical, Easy] You focus your ears on the sound to find its source.",
+                "max": 10,
+                "min": 4,
+                "pass": 7,
+                "fail": 8
+              },
+              {
+                "id": 2,
+                "label": "[Intelligence, Hard] You use a homing enchantment to track the source of the sound.",
+                "max": 20,
+                "min": 16,
+                "pass": 8,
+                "fail": 9
+              },
+              {
+                "id": 3,
+                "label": "[Chance, Very Easy] You keep walking. If you're meant to be involved fate will guide you.",
+                "max": 8,
+                "min": 2,
+                "pass": 8,
+                "fail": 8
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sequence_id": 7,
+        "content": {
+          "exposition": "You follow the fading echoes of the noise through the trees and find a gnome up a tree, wolves crowding the base of the trunk.",
+          "next": 10
+        }
+      },
+      {
+        "sequence_id": 8,
+        "content": {
+          "exposition": "You let your feet carry you, balancing the slack line of destiny until you find a gnome up a tree, wolves crowding the base of the trunk.",
+          "next": 10
+        }
+      },
+      {
+        "sequence_id": 9,
+        "content": {
+          "exposition": "A homing missile springs from your hands and flies into the trees but reappears behind you. In chases you through the trees before dissipating. As you're catching your breath, you look up to find a gnome up a tree, wolves crowding the base of the trunk.",
+          "next": 10
+        }
+      },
+      {
+        "sequence_id": 10,
+        "content": {
+          "challenge": {
+            "text": "The gnome yells for your help, the wolves turn their attention toward you.",
+            "type": "choice",
+            "actions": [
+              {
+                "id": 1,
+                "label": "Time to go!",
+                "alignment": "evil",
+                "next": 11
+              },
+              {
+                "id": 2,
+                "label": "Time to fight!",
+                "alignment": "good",
+                "next": 12
+              }
+            ]
+          }
+        }
+      },
+      {
+        "sequence_id": 11,
+        "content": {
+          "challenge": {
+            "text": "You try to flee from the wolves.",
+            "type": "choice",
+            "actions": [
+              {
+                "id": 1,
+                "label": "[Physical, Very Hard] Climb a tree.",
+                "score": "25",
+                "pass": 13,
+                "fail": 14
+              },
+              {
+                "id": 2,
+                "label": "[Chance, Impossible] I am not fated to die here.",
+                "score": "30",
+                "pass": 15,
+                "fail": 14
+              }
+            ]
+          }
+        }
+      }
+    ]
+}
